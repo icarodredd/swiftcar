@@ -9,10 +9,10 @@ export default function Header() {
   return (
     <>
       <header className="flex justify-between items-center p-4">
-        <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-2xl">
+        <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight">
           swiftcar
         </h1>
-        <div className="flex gap-12">
+        <div className="flex invisible lg:gap-12 lg:visible">
           <Link href={"/"} className="text-sm font-medium leading-none">
             Antigos
           </Link>
@@ -24,13 +24,13 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex">
-          <Button id="search" size={"sm"} variant="ghost">
+          <Button id="search" size={"icon"} variant="ghost">
             <Image src={searchIcon} alt="Search Icon" />
           </Button>
-          <Button id="cart" size={"sm"} variant="ghost">
+          <Button id="cart" size={"icon"} variant="ghost">
             <Image src={shoppingIcon} alt="Cart Icon" />
           </Button>
-          <Button id="customer" size={"sm"} variant="ghost">
+          <Button id="customer" size={"icon"} variant="ghost">
             <Image src={customerIcon} alt="Customer Icon" />
           </Button>
         </div>
