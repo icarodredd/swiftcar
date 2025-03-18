@@ -20,9 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Header />
-      <body className={`${geistSans.style.fontFamily}`}>{children}</body>
-      <Footer />
+      <body className={`${geistSans.style.fontFamily}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
