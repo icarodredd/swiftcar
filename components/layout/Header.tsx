@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import customerIcon from "@/icons/Customer.png";
-import searchIcon from "@/icons/Search.png";
-import shoppingIcon from "@/icons/ShoppingCart.png";
+import customerIcon from "@/assets/icons/Customer.png";
+import searchIcon from "@/assets/icons/Search.png";
+import shoppingIcon from "@/assets/icons/ShoppingCart.png";
 import { Button } from "../ui/button";
 
 export default function Header() {
