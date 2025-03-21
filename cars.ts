@@ -49,7 +49,7 @@ export const classicCars: ClassicCars = [
     engine: "2.5L - 3.0L 6-cylinder",
     horsepower: 115 - 160,
     topSpeed: "190 km/h",
-    image: "opel-comodore.png",
+    image: "opel-commodore.png",
     description:
       "O Opel Commodore B é um sedã esportivo alemão dos anos 70, combinando potência e conforto.",
     price: 35000,
