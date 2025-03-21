@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.style.fontFamily}`}>
+      <body className={`${geistSans.style.fontFamily} bg-swift-white`}>
         <Header />
         {children}
         <Footer />
