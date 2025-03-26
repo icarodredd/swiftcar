@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Home from "@/app/page";
+import { carsForSale } from "@/cars";
 import { screen } from "@testing-library/dom";
 import { render } from "@testing-library/react";
 import { StaticImageData } from "next/image";
@@ -65,6 +66,17 @@ describe("Home", () => {
       bestSellersCarousel?.querySelectorAll(".carousel-item");
 
     expect(bestSellersSlides).toHaveLength(5);
+
+    for (let i = 0; i < 5; i++) {
+      const car = carsForSale.bestSellers[i];
+      expect(bestSellersSlides?.[i].textContent).toContain(
+        car.name &&
+          car.price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })
+      );
+    }
   });
 
   it("should render the section of recently added cars", () => {
@@ -78,6 +90,17 @@ describe("Home", () => {
       recentlyAddedCarousel?.querySelectorAll(".carousel-item");
 
     expect(recentlyAddedSlides).toHaveLength(5);
+
+    for (let i = 0; i < 5; i++) {
+      const car = carsForSale.recentlyAdded[i];
+      expect(recentlyAddedSlides?.[i].textContent).toContain(
+        car.name &&
+          car.price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })
+      );
+    }
   });
 
   it("should render the bottom carousel", () => {
